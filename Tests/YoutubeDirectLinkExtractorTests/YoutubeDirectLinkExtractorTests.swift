@@ -8,16 +8,7 @@
 
 import Foundation
 import XCTest
-import YoutubeDirectLinkExtractor
+@testable import YoutubeDirectLinkExtractor
 
 class YoutubeDirectLinkExtractorTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //// XCTAssertEqual(YoutubeDirectLinkExtractor().text, "Hello, World!")
-    }
-    
-    static var allTests = [
-        ("testExample", testExample),
-    ]
 }
