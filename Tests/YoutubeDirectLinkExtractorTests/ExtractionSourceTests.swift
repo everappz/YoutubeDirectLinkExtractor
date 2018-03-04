@@ -21,7 +21,7 @@ class ExtractionSourceTests: XCTestCase {
         let urlString = "https://www.youtube.com/watch?v=L_jWHffIx5E"
         
         // when
-        let id = YoutubeDirectLinkExtractor.ExtractionSource.urlString(urlString).videoId
+        let id = ExtractionSource.urlString(urlString).videoId
         
         // then
         XCTAssertEqual(id, videoId)
@@ -33,7 +33,7 @@ class ExtractionSourceTests: XCTestCase {
         let url = URL(string: urlString)!
         
         // when
-        let id = YoutubeDirectLinkExtractor.ExtractionSource.url(url).videoId
+        let id = ExtractionSource.url(url).videoId
         
         // then
         XCTAssertEqual(id, videoId)
@@ -44,7 +44,7 @@ class ExtractionSourceTests: XCTestCase {
         let inputId = videoId
         
         // when
-        let id = YoutubeDirectLinkExtractor.ExtractionSource.id(inputId).videoId
+        let id = ExtractionSource.id(inputId).videoId
         
         // then
         XCTAssertEqual(id, videoId)
@@ -57,7 +57,7 @@ class ExtractionSourceTests: XCTestCase {
         let urlString = "https://www.youtube.com/watch?v=L_jWHffIx5E"
 
         // when
-        let id = YoutubeDirectLinkExtractor.ExtractionSource.urlString(urlString).videoId
+        let id = ExtractionSource.urlString(urlString).videoId
         
         // then
         XCTAssertEqual(id, videoId)
@@ -68,7 +68,7 @@ class ExtractionSourceTests: XCTestCase {
         let urlString = "https://youtu.be/L_jWHffIx5E"
 
         // when
-        let id = YoutubeDirectLinkExtractor.ExtractionSource.urlString(urlString).videoId
+        let id = ExtractionSource.urlString(urlString).videoId
         
         // then
         XCTAssertEqual(id, videoId)
@@ -79,7 +79,7 @@ class ExtractionSourceTests: XCTestCase {
         let urlString = "https://www.youtube.com/embed/L_jWHffIx5E"
         
         // when
-        let id = YoutubeDirectLinkExtractor.ExtractionSource.urlString(urlString).videoId
+        let id = ExtractionSource.urlString(urlString).videoId
         
         // then
         XCTAssertEqual(id, videoId)
@@ -90,7 +90,7 @@ class ExtractionSourceTests: XCTestCase {
         let urlString = "https://m.youtube.com/#/watch?v=L_jWHffIx5E"
         
         // when
-        let id = YoutubeDirectLinkExtractor.ExtractionSource.urlString(urlString).videoId
+        let id = ExtractionSource.urlString(urlString).videoId
         
         // then
         XCTAssertEqual(id, videoId)
@@ -103,7 +103,7 @@ class ExtractionSourceTests: XCTestCase {
         let urlString = "https://youtube.com/watch?v=L_jWHffIx5E"
         
         // when
-        let id = YoutubeDirectLinkExtractor.ExtractionSource.urlString(urlString).videoId
+        let id = ExtractionSource.urlString(urlString).videoId
         
         // then
         XCTAssertEqual(id, videoId)
@@ -114,7 +114,7 @@ class ExtractionSourceTests: XCTestCase {
         let urlString = "https://youtube.com/embed/L_jWHffIx5E"
         
         // when
-        let id = YoutubeDirectLinkExtractor.ExtractionSource.urlString(urlString).videoId
+        let id = ExtractionSource.urlString(urlString).videoId
         
         // then
         XCTAssertEqual(id, videoId)

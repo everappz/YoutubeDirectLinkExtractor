@@ -10,55 +10,61 @@ import Foundation
 
 class YoutubeDirectLinkExtractor {
     
-    public enum ExtractionSource {
-        case url(URL)
-        case urlString(String)
-        case id(String)
+    private let infoBasePrefix = "https://www.youtube.com/get_video_info?video_id="
+    private let userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6"
+    
+    // MARK: - Public
+    
+    public func extractInfo(from source: ExtractionSource,
+                            completion: @escaping ([[String: String]], Swift.Error?) -> Void) {
         
-        var videoId: String? {
-            switch self {
-                
-            case .url(let url):
-                return videoId(from: url)
-                
-            case .urlString(let string):
-                guard let url = URL(string: string) else {
-                    return nil
-                }
-                
-                return videoId(from: url)
-                
-            case .id(let videoId):
-                return videoId
-            }
+        guard let id = source.videoId else {
+            completion([], Error.cantExtractVideoId)
+            return
         }
         
-        private func videoId(from url: URL) -> String? {
-            guard let host = url.host else {
-                return nil
-            }
-            
-            let components = url.pathComponents
-            
-            switch host {
-                
-            case _ where host.contains("youtu.be"):
-                return components[safe: 1]
-                
-            case _ where host.contains("m.youtube.com"):
-                return url.absoluteString.components(separatedBy: "?").last?.queryComponents()["v"]
-                
-            case _ where host.contains("youtube.com")
-                && components[safe: 1] == "embed":
-                return components[safe: 2]
-                
-            case _ where host.contains("youtube.com")
-                && components[safe: 1] != "embed":
-                return url.query?.queryComponents()["v"]
-                
-            default:
-                return nil
-            }
+        guard let infoUrl = URL(string: "\(infoBasePrefix)\(id)") else {
+            completion([], Error.cantConstructRequestUrl)
+            return
         }
+        
+        let r = NSMutableURLRequest(url: infoUrl)
+        r.httpMethod = "GET"
+        r.setValue(userAgent, forHTTPHeaderField: "User-Agent")
+        
+        URLSession.shared.dataTask(with: r as URLRequest) { data, response, error in
+
+            guard let data = data else {
+                completion([], error ?? Error.noDataInResponse)
+                return
+            }
+            
+            guard let dataString = String(data: data, encoding: .utf8) else {
+                completion([], Error.cantConvertDataToString)
+                return
+            }
+            
+            let extractionResult = self.extractInfo(from: dataString)
+            completion(extractionResult.0, extractionResult.1)
+            
+        }.resume()
+    }
+    
+    // MARK: - Internal
+    
+    func extractInfo(from string: String) -> ([[String: String]], Swift.Error?) {
+        
+        let pairs = string.queryComponents()
+        
+        guard let fmtStreamMap = pairs["url_encoded_fmt_stream_map"] else {
+            let error = YoutubeError(errorDescription: pairs["reason"])
+            return ([], error ?? Error.cantExtractFmtStreamMap)
+        }
+        
+        let fmtStreamMapComponents = fmtStreamMap.components(separatedBy: ",")
+        
+        let infoPerPreset = fmtStreamMapComponents.map { $0.queryComponents() }
+        return (infoPerPreset, nil)
     }
 }
+

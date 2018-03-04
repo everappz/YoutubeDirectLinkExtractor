@@ -26,6 +26,23 @@
 		B02EF699204C3A3D002A045E /* ExtractionSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EF698204C3A3D002A045E /* ExtractionSourceTests.swift */; };
 		B02EF69A204C3A3D002A045E /* ExtractionSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EF698204C3A3D002A045E /* ExtractionSourceTests.swift */; };
 		B02EF69B204C3A3D002A045E /* ExtractionSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EF698204C3A3D002A045E /* ExtractionSourceTests.swift */; };
+		B03ABD75204C5D59007C74A3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03ABD74204C5D59007C74A3 /* Errors.swift */; };
+		B03ABD76204C5D59007C74A3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03ABD74204C5D59007C74A3 /* Errors.swift */; };
+		B03ABD77204C5D59007C74A3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03ABD74204C5D59007C74A3 /* Errors.swift */; };
+		B03ABD78204C5D59007C74A3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03ABD74204C5D59007C74A3 /* Errors.swift */; };
+		B03ABD7A204C5DBB007C74A3 /* ExtractionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03ABD79204C5DBB007C74A3 /* ExtractionSource.swift */; };
+		B03ABD7B204C5DBB007C74A3 /* ExtractionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03ABD79204C5DBB007C74A3 /* ExtractionSource.swift */; };
+		B03ABD7C204C5DBB007C74A3 /* ExtractionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03ABD79204C5DBB007C74A3 /* ExtractionSource.swift */; };
+		B03ABD7D204C5DBB007C74A3 /* ExtractionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03ABD79204C5DBB007C74A3 /* ExtractionSource.swift */; };
+		B0450FA8204C638C00C45B11 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0450FA7204C638C00C45B11 /* Stub.swift */; };
+		B0450FA9204C638C00C45B11 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0450FA7204C638C00C45B11 /* Stub.swift */; };
+		B0450FAA204C638C00C45B11 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0450FA7204C638C00C45B11 /* Stub.swift */; };
+		B0450FAC204C641500C45B11 /* ResponseAllQualities.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0450FAB204C641500C45B11 /* ResponseAllQualities.txt */; };
+		B0450FAD204C641500C45B11 /* ResponseAllQualities.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0450FAB204C641500C45B11 /* ResponseAllQualities.txt */; };
+		B0450FAE204C641500C45B11 /* ResponseAllQualities.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0450FAB204C641500C45B11 /* ResponseAllQualities.txt */; };
+		B0450FB0204C6C7900C45B11 /* ResponseUpToMediumQualities.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0450FAF204C6C7900C45B11 /* ResponseUpToMediumQualities.txt */; };
+		B0450FB1204C6C7900C45B11 /* ResponseUpToMediumQualities.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0450FAF204C6C7900C45B11 /* ResponseUpToMediumQualities.txt */; };
+		B0450FB2204C6C7900C45B11 /* ResponseUpToMediumQualities.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0450FAF204C6C7900C45B11 /* ResponseUpToMediumQualities.txt */; };
 		DD7502881C68FEDE006590AF /* YoutubeDirectLinkExtractor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* YoutubeDirectLinkExtractor.framework */; };
 		DD7502921C690C7A006590AF /* YoutubeDirectLinkExtractor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* YoutubeDirectLinkExtractor.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +84,11 @@
 		B02EF68E204BF0CF002A045E /* String+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Components.swift"; sourceTree = "<group>"; };
 		B02EF693204C2EDE002A045E /* Array+SafeSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SafeSubscript.swift"; sourceTree = "<group>"; };
 		B02EF698204C3A3D002A045E /* ExtractionSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractionSourceTests.swift; sourceTree = "<group>"; };
+		B03ABD74204C5D59007C74A3 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		B03ABD79204C5DBB007C74A3 /* ExtractionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractionSource.swift; sourceTree = "<group>"; };
+		B0450FA7204C638C00C45B11 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		B0450FAB204C641500C45B11 /* ResponseAllQualities.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResponseAllQualities.txt; sourceTree = "<group>"; };
+		B0450FAF204C6C7900C45B11 /* ResponseUpToMediumQualities.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResponseUpToMediumQualities.txt; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* YoutubeDirectLinkExtractor-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YoutubeDirectLinkExtractor-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD75028D1C690C7A006590AF /* YoutubeDirectLinkExtractor-tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YoutubeDirectLinkExtractor-tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,9 +185,10 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B02EF693204C2EDE002A045E /* Array+SafeSubscript.swift */,
+				B0450FA5204C5E3E00C45B11 /* Extensions */,
 				8933C7841EB5B820000D00A4 /* YoutubeDirectLinkExtractor.swift */,
-				B02EF68E204BF0CF002A045E /* String+Components.swift */,
+				B03ABD79204C5DBB007C74A3 /* ExtractionSource.swift */,
+				B03ABD74204C5D59007C74A3 /* Errors.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -173,11 +196,31 @@
 		8933C7831EB5B7EB000D00A4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B0450FA6204C635A00C45B11 /* Stubs */,
 				8933C7891EB5B82A000D00A4 /* YoutubeDirectLinkExtractorTests.swift */,
 				B02EF698204C3A3D002A045E /* ExtractionSourceTests.swift */,
 			);
 			name = Tests;
 			path = Tests/YoutubeDirectLinkExtractorTests;
+			sourceTree = "<group>";
+		};
+		B0450FA5204C5E3E00C45B11 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B02EF693204C2EDE002A045E /* Array+SafeSubscript.swift */,
+				B02EF68E204BF0CF002A045E /* String+Components.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B0450FA6204C635A00C45B11 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				B0450FA7204C638C00C45B11 /* Stub.swift */,
+				B0450FAB204C641500C45B11 /* ResponseAllQualities.txt */,
+				B0450FAF204C6C7900C45B11 /* ResponseUpToMediumQualities.txt */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		DD7502721C68FC1B006590AF /* Frameworks */ = {
@@ -431,6 +474,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0450FB0204C6C7900C45B11 /* ResponseUpToMediumQualities.txt in Resources */,
+				B0450FAC204C641500C45B11 /* ResponseAllQualities.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +504,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0450FB1204C6C7900C45B11 /* ResponseUpToMediumQualities.txt in Resources */,
+				B0450FAD204C641500C45B11 /* ResponseAllQualities.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +513,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0450FB2204C6C7900C45B11 /* ResponseUpToMediumQualities.txt in Resources */,
+				B0450FAE204C641500C45B11 /* ResponseAllQualities.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +525,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03ABD7A204C5DBB007C74A3 /* ExtractionSource.swift in Sources */,
+				B03ABD75204C5D59007C74A3 /* Errors.swift in Sources */,
 				B02EF694204C2EDE002A045E /* Array+SafeSubscript.swift in Sources */,
 				B02EF68F204BF0CF002A045E /* String+Components.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* YoutubeDirectLinkExtractor.swift in Sources */,
@@ -487,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C7901EB5B82D000D00A4 /* YoutubeDirectLinkExtractorTests.swift in Sources */,
+				B0450FA8204C638C00C45B11 /* Stub.swift in Sources */,
 				B02EF699204C3A3D002A045E /* ExtractionSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +547,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03ABD7C204C5DBB007C74A3 /* ExtractionSource.swift in Sources */,
+				B03ABD77204C5D59007C74A3 /* Errors.swift in Sources */,
 				B02EF696204C2EDE002A045E /* Array+SafeSubscript.swift in Sources */,
 				B02EF691204BF0CF002A045E /* String+Components.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* YoutubeDirectLinkExtractor.swift in Sources */,
@@ -505,6 +559,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03ABD7D204C5DBB007C74A3 /* ExtractionSource.swift in Sources */,
+				B03ABD78204C5D59007C74A3 /* Errors.swift in Sources */,
 				B02EF697204C2EDE002A045E /* Array+SafeSubscript.swift in Sources */,
 				B02EF692204BF0CF002A045E /* String+Components.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* YoutubeDirectLinkExtractor.swift in Sources */,
@@ -515,6 +571,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03ABD7B204C5DBB007C74A3 /* ExtractionSource.swift in Sources */,
+				B03ABD76204C5D59007C74A3 /* Errors.swift in Sources */,
 				B02EF695204C2EDE002A045E /* Array+SafeSubscript.swift in Sources */,
 				B02EF690204BF0CF002A045E /* String+Components.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* YoutubeDirectLinkExtractor.swift in Sources */,
@@ -526,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C78F1EB5B82C000D00A4 /* YoutubeDirectLinkExtractorTests.swift in Sources */,
+				B0450FA9204C638C00C45B11 /* Stub.swift in Sources */,
 				B02EF69A204C3A3D002A045E /* ExtractionSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C78E1EB5B82C000D00A4 /* YoutubeDirectLinkExtractorTests.swift in Sources */,
+				B0450FAA204C638C00C45B11 /* Stub.swift in Sources */,
 				B02EF69B204C3A3D002A045E /* ExtractionSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
