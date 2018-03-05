@@ -31,13 +31,30 @@ class YoutubeDirectLinkExtractorTests: XCTestCase {
         XCTAssertEqual(result.0.count, 4)
     }
     
-//    func testIRL() {
+    // MARK: - Real-world testing
+    
+//    func testRealExtractInfo() {
 //        // given
 //        let videoId = "hMloyp6NI4E"
 //        let expectation = XCTestExpectation(description: "Get callback fired")
 //
 //        // then
-//        YoutubeDirectLinkExtractor().extractInfo(from: .id(videoId)) { info, error in
+//        YoutubeDirectLinkExtractor().extractInfo(for: .id(videoId), success: { info in
+//            expectation.fulfill()
+//        }) { error in
+//            expectation.fulfill()
+//        }
+//
+//        wait(for: [expectation], timeout: 10)
+//    }
+    
+//    func testRealExtractRawInfo() {
+//        // given
+//        let videoId = "hMloyp6NI4E"
+//        let expectation = XCTestExpectation(description: "Get callback fired")
+//
+//        // then
+//        YoutubeDirectLinkExtractor().extractRawInfo(for: .id(videoId)) { info, error in
 //            expectation.fulfill()
 //        }
 //

@@ -15,8 +15,33 @@ class YoutubeDirectLinkExtractor {
     
     // MARK: - Public
     
-    public func extractInfo(from source: ExtractionSource,
-                            completion: @escaping ([[String: String]], Swift.Error?) -> Void) {
+    public func extractInfo(for source: ExtractionSource,
+                            success: @escaping (VideoInfo) -> Void,
+                            failure: @escaping (Swift.Error) -> Void) {
+        
+        extractRawInfo(for: source) { info, error in
+            
+            if let error = error {
+                failure(error)
+                return
+            }
+            
+            guard let highestQualityLink = info.first?["url"],
+            let lowestQualityLink = info.last?["url"] else {
+                failure(Error.unkown)
+                return
+            }
+            
+            success(VideoInfo(rawInfo: info,
+                              highestQualityLink: highestQualityLink,
+                              lowestQualityLink: lowestQualityLink))
+        }
+    }
+    
+    // MARK: - Internal
+    
+    func extractRawInfo(for source: ExtractionSource,
+                        completion: @escaping ([[String: String]], Swift.Error?) -> Void) {
         
         guard let id = source.videoId else {
             completion([], Error.cantExtractVideoId)
@@ -50,10 +75,7 @@ class YoutubeDirectLinkExtractor {
         }.resume()
     }
     
-    // MARK: - Internal
-    
     func extractInfo(from string: String) -> ([[String: String]], Swift.Error?) {
-        
         let pairs = string.queryComponents()
         
         guard let fmtStreamMap = pairs["url_encoded_fmt_stream_map"] else {
@@ -67,4 +89,3 @@ class YoutubeDirectLinkExtractor {
         return (infoPerPreset, nil)
     }
 }
-
