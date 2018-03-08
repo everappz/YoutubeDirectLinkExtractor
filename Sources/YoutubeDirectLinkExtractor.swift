@@ -29,15 +29,12 @@ public class YoutubeDirectLinkExtractor {
                 return
             }
             
-            guard let highestQualityLink = info.first?["url"],
-            let lowestQualityLink = info.last?["url"] else {
+            guard info.count > 0 else {
                 failure(Error.unkown)
                 return
             }
             
-            success(VideoInfo(rawInfo: info,
-                              highestQualityLink: highestQualityLink,
-                              lowestQualityLink: lowestQualityLink))
+            success(VideoInfo(rawInfo: info))
         }
     }
     
