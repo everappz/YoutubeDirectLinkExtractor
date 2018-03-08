@@ -9,7 +9,7 @@
 import Foundation
 
 public struct VideoInfo {
-    let rawInfo: [[String: String]]
-    let highestQualityLink: String
-    let lowestQualityLink: String
+    public let rawInfo: [[String: String]]
+    public let highestQualityLink: String
+    public let lowestQualityLink: String
 }

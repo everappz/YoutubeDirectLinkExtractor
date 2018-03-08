@@ -8,12 +8,15 @@
 
 import Foundation
 
-class YoutubeDirectLinkExtractor {
+public class YoutubeDirectLinkExtractor {
     
     private let infoBasePrefix = "https://www.youtube.com/get_video_info?video_id="
     private let userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6"
     
     // MARK: - Public
+    
+    public init() {
+    }
     
     public func extractInfo(for source: ExtractionSource,
                             success: @escaping (VideoInfo) -> Void,
