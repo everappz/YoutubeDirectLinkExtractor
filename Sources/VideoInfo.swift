@@ -11,6 +11,7 @@ import AVFoundation
 
 public struct VideoInfo {
     
+    /** Raw info for each video quality. Elements are sorted by video quality with first being the highest quality. */
     public let rawInfo: [[String: String]]
     
     public var highestQualityPlayableLink: String? {
