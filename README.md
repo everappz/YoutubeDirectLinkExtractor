@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/devandsev/YoutubeDirectLinkExtractor.svg?branch=develop)](https://travis-ci.org/devandsev/YoutubeDirectLinkExtractor)
 
 YoutubeDirectLinkExtractor allows you to obtain the direct link to a YouTube video, which you can easily use with AVPlayer. 
-It uses type safety to guarantee that you won't crash while extracting the link no matter what. There are popular alternatives lacking those features, though: [YoutubeSourceParserKit](https://github.com/mojilala/YoutubeSourceParserKit), [HCYoutubeParser](https://github.com/hellozimi/HCYoutubeParser).
+It uses type safety and optionals to guarantee that you won't crash while extracting the link no matter what. There are popular alternatives, which use more straightforward and risky approach, though: [YoutubeSourceParserKit](https://github.com/mojilala/YoutubeSourceParserKit), [HCYoutubeParser](https://github.com/hellozimi/HCYoutubeParser).
 
 ## Installation
 
